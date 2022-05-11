@@ -1,7 +1,7 @@
-# KeyFobSecurity
+# KeyFobSecurity #
 A project on the security in rolling code remote keyless entry systems, primarily used in vehicles. The project uses a laptop with a SDR hardware device, and microcontroller to simultaneously jam and record a key fobs signal, which can be later replayed to unlock the vehicle 
 
-# What exactly is this method and how does it work?
+## What exactly is this method and how does it work? ##
 This method is almost like a more advanced replay attack, to understand the method, first an understanding of rolling codes (hopping codes) is needed.
 The rolling code system was implemented to prevent replay attacks from occurring, which they successfully do. As shown below.
 This first image represents the long list of codes that both the key fob and vehicle will have, the codes are generated using an algorithm so both key fob and vehicle will have the exact same list.
@@ -19,6 +19,7 @@ So what happens if you click the unlock button a load of times outside the vehic
 </p>
 
 
-# What vehicles / devices does this method work on?
+## What vehicles / devices does this method work on? ##
 
-# Intructions
+## Intructions ##
+### Equipment List ###
