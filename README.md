@@ -25,17 +25,24 @@ So what happens if you click the unlock button a load of times outside the vehic
 2. The microcontroller with a 433MHz antenna jams the signal, the laptop simultaneously records the signal
 3. The user naturally will click the unlock button again
 4. Once again, the signal is jammed and recorded
-<p align="center">
+<p align="left">
   <img src="https://user-images.githubusercontent.com/50533340/167969015-11ec0c6e-8059-4d5e-9d32-cc34366119bc.png">
 </p>
-6. The laptop replays the first signal recorded and unlocks the car
-7. A second signal has still been recorded, and can be later used to unlock the car
-<p align="center">
+5. The laptop sends a signal over wifi to the microcontroller to stop jamming
+6. The laptop replays the first signal recorded and unlocks the car <br>
+7. A second signal has still been recorded, and can be later used to unlock the car<br>
+<p align="left">
   <img src="https://user-images.githubusercontent.com/50533340/167969034-684074e5-3bb6-4fb1-8977-93895d2d2fd6.png">
 </p>
 
 
 ## What vehicles / devices does this method work on? ##
-
+Theoretically, any vehicle with using one-way communication and an RKEs (remote keyless entry system) can be used.
+However, the method has only been tested on the following vehicles:
+- Ford S-Max 2016
 ## Instructions ##
 #### Equipment List ####
+1. CC1101 433MHz Wireless Transciever
+2. Wemos D1 Mini Microcontroller (Any ESP8266 microcontroller)
+3. Laptop (The signal processing is quite demanding, a minimum quad core is likely required)
+
