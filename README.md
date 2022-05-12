@@ -106,7 +106,7 @@ sudo apt install arduino
 10. Connect the wemos D1 mini via USB, and select whatever port shows up in Tools > Port > COMX (X can be any number)
 11. Upload the program using the upload button in the top left (the arrow pointing right), this may take a minute or two and the upload progress can be seen in the terminal at the bottom of the screen. If you receieve an error, you likely selected the wrong port.
 #### Wiring the microcontroller to the CC1101 module ####
-1. The arduino library installed is located [here](https://github.com/LSatan/SmartRC-CC1101-Driver-Lib). If you are not using the Wemos D1 and instead using an arduino or ESP8266 then you can follow the guide on their page on how to connect the CC110 module
+1. The arduino library installed in the previous step is located [here](https://github.com/LSatan/SmartRC-CC1101-Driver-Lib). If you are not using the Wemos D1 and instead using an arduino or ESP8266 then you can follow the guide on their page on how to connect the CC110 module
 2. The CC1101 moudle can be wired to the wemos d1 mini using the following diagram:
 <p align="center">
   <img width=50% src="https://user-images.githubusercontent.com/50533340/167989575-c3315ac0-7ed3-4d59-9d49-51c1b82eb3a3.png">
