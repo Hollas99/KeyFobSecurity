@@ -3,6 +3,7 @@ A project on the security in rolling code remote keyless entry systems, primaril
 
 ## What exactly is this method and how does it work? ##
 This method is almost like a more advanced replay attack, to understand the method, first an understanding of rolling codes (hopping codes) is needed.
+#### Rolling Codes ####
 The rolling code system was implemented to prevent replay attacks from occurring, which they successfully do. As shown below.
 This first image represents the long list of codes that both the key fob and vehicle will have, the codes are generated using an algorithm so both key fob and vehicle will have the exact same list.
 <p align="center">
@@ -18,8 +19,23 @@ So what happens if you click the unlock button a load of times outside the vehic
   <img src="https://user-images.githubusercontent.com/50533340/167963102-f9a35ee9-84a5-4868-b620-e9a7bb2577e8.png">
 </p>
 
+<h4> How it works </h4>
+
+1. The user goes to unlock their car, clicking the unlock button on their key fob
+2. The microcontroller with a 433MHz antenna jams the signal, the laptop simultaneously records the signal
+3. The user naturally will click the unlock button again
+4. Once again, the signal is jammed and recorded
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50533340/167969015-11ec0c6e-8059-4d5e-9d32-cc34366119bc.png">
+</p>
+6. The laptop replays the first signal recorded and unlocks the car
+7. A second signal has still been recorded, and can be later used to unlock the car
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50533340/167969034-684074e5-3bb6-4fb1-8977-93895d2d2fd6.png">
+</p>
+
 
 ## What vehicles / devices does this method work on? ##
 
-## Intructions ##
-### Equipment List ###
+## Instructions ##
+#### Equipment List ####
