@@ -3,12 +3,16 @@ A project on the security in rolling code remote keyless entry systems, primaril
 ## Contents ##
 - [KeyFobSecurity](#keyfobsecurity)
   * [Contents](#contents)
-  * [What exactly is this method and how does it work](#what-exactly-is-this-method-and-how-does-it-work)
+  * [What exactly is this method and how does it work?](#what-exactly-is-this-method-and-how-does-it-work)
       - [Rolling Codes](#rolling-codes)
-  * [What vehicles / devices does this method work on?](#what-vehicles--devices-does-this-method-work-on)
+  * [What vehicles / devices does this method work on](#what-vehicles--devices-does-this-method-work-on)
   * [Instructions](#instructions)
-      - [Equipment List](#equipment-list)
-      - [Method](#method)
+    + [Equipment List](#equipment-list)
+    + [Method](#method)
+      - [Installing Ubuntu and GNURadio](#installing-ubuntu-and-gnuradio)
+      - [Installing Arduino IDE and programming the microcontroller](#installing-arduino-ide-and-programming-the-microcontroller)
+      - [Wiring the microscontroller](#wiring-the-microscontroller)
+
 
 
 
@@ -47,23 +51,25 @@ So what happens if you click the unlock button a load of times outside the vehic
 </p>
 
 
-## What vehicles / devices does this method work on ##
+## What vehicles / devices does this method work on? ##
 Theoretically, any vehicle with using one-way communication and an RKEs (remote keyless entry system) can be used.
 However, the method has only been tested on the following vehicles:
 - Ford S-Max 2016
 ## Instructions ##
-#### Equipment List ####
-1. CC1101 433MHz Wireless Transciever
+### Equipment List ###
+1. CC1101 433MHz Wireless Transciever (There are a few versions, I have the version with 8 pins)
 2. USB Memory Stick (Min 8GB)
 3. Wemos D1 Mini Microcontroller (Any ESP8266 microcontroller)
-4. Breadboard jumper wires (x8)
-5. Portable Power Source (Im using a portable power bank)
-6. Hack RF One (Any GNURadio supported transciever will work)
-7. Laptop (The signal processing is quite demanding, a minimum quad core is likely required)
+4. Small Solderless Breadboard (SYB-170 is what im using)
+5. Breadboard jumper wires (x8)
+6. Portable Power Source (Im using a portable power bank)
+7. Hack RF One (Any GNURadio supported transciever will work)
+8. Laptop (The signal processing is quite demanding, a minimum quad core is likely required)
 
-#### Method ####
+### Method ###
 I will explain exactly how I have been operating the devices, however alternatives can be made throughout as you wish.
 Firstly, the intial steps taken such as installing ubnutu were completed from a windows operating system.
+#### Installing Ubuntu and GNURadio ####
 1. Install Ubuntu Operating System on the laptop, I'm running Ubunutu 20 as dual boot
 this can be achieved by downloading the latest iso file [here](https://ubuntu.com/download/desktop) and then create a bootable USB stick. I used [Rufus](https://rufus.ie). Install Ubuntu as the main OS or you can install it as dual boot as I have. 
 2. The next step is installing GNURadio, open a terminal as root as type the following, official steps can be viewed [here](https://github.com/gnuradio/pybombs)
@@ -75,8 +81,27 @@ pybombs recipes add-defaults
 pybombs prefix init ~/prefix-3.10 -R gnuradio-default
 source ~/prefix-3.10/setup_env.sh
 ```
-You can then run the following to open GNURadio
+3. This may take quite a while, when finsihed you can then run the following to open GNURadio
 ```
 gnuradio-companion
 ```
-3. 
+4. The pybombs files can then be downloaded from this repository located in the pyBombs Folder
+5. Connect the SDR device (HackRF One) to the laptop
+6. You should be able to then open the downloaded GNURadio file and run the program
+#### Installing Arduino IDE and programming the microcontroller ####
+The next step is to program the microcontroller, and can be achieved from either Ubuntu or Windows
+1. Download Arduino [Windows](https://www.arduino.cc/en/software)
+or for Ubuntu, in terminal type:
+```
+sudo apt install arduino
+```
+2. Open the arduino program, go to File > Preferences
+3. Enter ```http://arduino.esp8266.com/stable/package_esp8266com_index.json``` in the "Additional Boards Manager URLs" and click "OK"
+4. Go to Tools > Board (it may say ```Board:"Arduino Uno"``` as default) > Boards Manager...
+5. Type in ```esp8266``` and click the install button
+6. You should then be able to select ```LOLIN(WEMOS) D1 R2 & mini``` from the Tools > Board > ESP8266 Boards menu
+7. You can then download the file located in Arduino in this repository
+8. Connect the wemos D1 mini via USB, and select whatever port shows up in Tools > Port > COMX (X can be any number)
+9. Upload the program using the upload button in the top left (the arrow pointing right), this may take a minute or two and the upload progress can be seen in the terminal at the bottom of the screen. If you receieve an error, you likely select the wrong port.
+#### Wiring the microcontroller to the CC1101 module ####
+1. 
