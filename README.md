@@ -63,7 +63,7 @@ However, the method has only been tested on the following vehicles:
 4. Small Solderless Breadboard (SYB-170 is what im using)
 5. Breadboard jumper wires (x8)
 6. Portable Power Source (Im using a portable power bank)
-7. Hack RF One (Any GNURadio supported transciever will work)
+7. Hack RF One (Any GNURadio supported **transciever** will work)
 8. Laptop (The signal processing is quite demanding, a minimum quad core is likely required)
 
 ### Method ###
@@ -100,8 +100,14 @@ sudo apt install arduino
 4. Go to Tools > Board (it may say ```Board:"Arduino Uno"``` as default) > Boards Manager...
 5. Type in ```esp8266``` and click the install button
 6. You should then be able to select ```LOLIN(WEMOS) D1 R2 & mini``` from the Tools > Board > ESP8266 Boards menu
-7. You can then download the file located in Arduino in this repository
-8. Connect the wemos D1 mini via USB, and select whatever port shows up in Tools > Port > COMX (X can be any number)
-9. Upload the program using the upload button in the top left (the arrow pointing right), this may take a minute or two and the upload progress can be seen in the terminal at the bottom of the screen. If you receieve an error, you likely select the wrong port.
+7. Next open the library manager by going to Tools > Manage Libraries... 
+8. Type in CC1101 and look for the option with the title ```SmartRC-CC1101-Driver-Lib``` and click install
+9. You can then download the file located in folder 'Arduino' in this repository
+10. Connect the wemos D1 mini via USB, and select whatever port shows up in Tools > Port > COMX (X can be any number)
+11. Upload the program using the upload button in the top left (the arrow pointing right), this may take a minute or two and the upload progress can be seen in the terminal at the bottom of the screen. If you receieve an error, you likely selected the wrong port.
 #### Wiring the microcontroller to the CC1101 module ####
-1. 
+1. The arduino library installed is located [here](https://github.com/LSatan/SmartRC-CC1101-Driver-Lib). If you are not using the Wemos D1 and instead using an arduino or ESP8266 then you can follow the guide on their page on how to connect the CC110 module
+2. The CC1101 moudle can be wired to the wemos d1 mini using the following diagram:
+<p align="center">
+  <img width=50% src="https://user-images.githubusercontent.com/50533340/167989575-c3315ac0-7ed3-4d59-9d49-51c1b82eb3a3.png">
+</p>
