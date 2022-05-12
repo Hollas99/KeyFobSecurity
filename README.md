@@ -1,7 +1,15 @@
 # KeyFobSecurity #
 A project on the security in rolling code remote keyless entry systems, primarily used in vehicles. The project uses a laptop with a SDR hardware device, and microcontroller to simultaneously jam and record a key fobs signal, which can be later replayed to unlock the vehicle 
 ## Contents ##
-[What exactly is this method and how does it work?]()
+- [KeyFobSecurity](#keyfobsecurity)
+  * [Contents](#contents)
+  * [What exactly is this method and how does it work](#what-exactly-is-this-method-and-how-does-it-work)
+      - [Rolling Codes](#rolling-codes)
+  * [What vehicles / devices does this method work on?](#what-vehicles--devices-does-this-method-work-on)
+  * [Instructions](#instructions)
+      - [Equipment List](#equipment-list)
+      - [Method](#method)
+
 
 
 ## What exactly is this method and how does it work? ##
@@ -39,7 +47,7 @@ So what happens if you click the unlock button a load of times outside the vehic
 </p>
 
 
-## What vehicles / devices does this method work on? ##
+## What vehicles / devices does this method work on ##
 Theoretically, any vehicle with using one-way communication and an RKEs (remote keyless entry system) can be used.
 However, the method has only been tested on the following vehicles:
 - Ford S-Max 2016
@@ -66,6 +74,9 @@ pybombs auto-config
 pybombs recipes add-defaults
 pybombs prefix init ~/prefix-3.10 -R gnuradio-default
 source ~/prefix-3.10/setup_env.sh
+```
+You can then run the following to open GNURadio
+```
 gnuradio-companion
 ```
 3. 
