@@ -29,7 +29,7 @@ When the unlock button is pressed on the key fob, as seen, a single-use code is 
   <img src="https://user-images.githubusercontent.com/50533340/167963092-763461d1-ed39-4cf0-b2a4-920a23a18d69.png">
 </p>
 
-So what happens if you click the unlock button a load of times outside the vehicles range? That's why a long list is stored on both devices instead of just storing one code. The vehicle accepts any number of codes infront of the previously used code. After the image above the key fob is pressed twice out of range of the car, and then once within the cars range, as seen the car accepts the unlock code, and then discards all the codes previous to it.
+So, what happens if you click the unlock button a load of times outside the vehicles range? That's why a long list is stored on both devices instead of just storing one code. The vehicle accepts any number of codes in front of the previously used code. After the image above the key fob is pressed twice out of range of the car, and then once within the cars range, as seen the car accepts the unlock code, and then discards all the codes previous to it.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/50533340/167963102-f9a35ee9-84a5-4868-b620-e9a7bb2577e8.png">
 </p>
@@ -57,17 +57,17 @@ However, the method has only been tested on the following vehicles:
 - Ford S-Max 2016
 ## Instructions ##
 ### Equipment List ###
-1. CC1101 433MHz Wireless Transciever (There are a few versions, I have the version with 8 pins)
+1. CC1101 433MHz Wireless Transceiver (There are a few versions, I have the version with 8 pins)
 2. USB Memory Stick (Min 8GB)
 3. Wemos D1 Mini Microcontroller (Any ESP8266 microcontroller, or Arduino can be used)
-4. Small Solderless Breadboard (SYB-170 is what im using)
+4. Small Solderless Breadboard (SYB-170 is what I'm using)
 5. Breadboard jumper wires (x8)
-6. Portable Power Source (Im using a portable power bank, batteries would work fine)
-7. Hack RF One (Any GNURadio supported **transciever** will work)
-8. Laptop (The signal processing is quite demanding, a minimum quad core is likely required)
+6. Portable Power Source (I'm using a portable power bank, batteries would work fine)
+7. Hack RF One (Any GNURadio supported **transceiver** will work)
+8. Laptop (The signal processing is quite demanding; a minimum quad core is likely required)
 
 ### Method ###
-I will explain exactly how I have been operating the devices, however alternatives can be made throughout as you wish.
+I will explain exactly how I have been operating the devices; however, alternatives can be made throughout as you wish.
 Firstly, the intial steps taken such as installing ubnutu were completed from a windows operating system.
 #### Installing Ubuntu and GNURadio ####
 1. Install Ubuntu Operating System on the laptop, I'm running Ubunutu 20 as dual boot
@@ -81,7 +81,7 @@ pybombs recipes add-defaults
 pybombs prefix init ~/prefix-3.10 -R gnuradio-default
 source ~/prefix-3.10/setup_env.sh
 ```
-3. This may take quite a while, when finsihed you can then run the following to open GNURadio
+3. This may take quite a while, when finished you can then run the following to open GNURadio
 ```
 gnuradio-companion
 ```
@@ -95,7 +95,7 @@ or for Ubuntu, in terminal type:
 ```
 sudo apt install arduino
 ```
-2. Open the arduino program, go to **File > Preferences**
+2. Open the Arduino program, go to **File > Preferences**
 3. Enter ```http://arduino.esp8266.com/stable/package_esp8266com_index.json``` in the **"Additional Boards Manager URLs"** and click **"OK"**
 4. Go to **Tools > Board** (it may say ```Board:"Arduino Uno"``` as default) **> Boards Manager...**
 5. Type in ```esp8266``` and click the **install** button
@@ -104,10 +104,10 @@ sudo apt install arduino
 8. Type in **CC1101** and look for the option with the title ```SmartRC-CC1101-Driver-Lib``` and click **install**
 9. You can then download the file located in folder ***'Arduino'*** in this repository
 10. Connect the wemos D1 mini via USB, and select whatever port shows up in **Tools > Port > COMX** (X can be any number)
-11. **Upload** the program using the upload button in the top left (the arrow pointing right), this may take a minute or two and the upload progress can be seen in the terminal at the bottom of the screen. *If you receieve an error, you likely selected the wrong port.*
+11. **Upload** the program using the upload button in the top left (the arrow pointing right), this may take a minute or two and the upload progress can be seen in the terminal at the bottom of the screen. *If you receive an error, you likely selected the wrong port.*
 #### Wiring the microcontroller to the CC1101 module ####
-1. The arduino library installed in the previous step is located [here](https://github.com/LSatan/SmartRC-CC1101-Driver-Lib). If you are not using the Wemos D1 and instead using an arduino or ESP8266 then you can follow the guide on their page on how to connect the CC1101 module
-2. The CC1101 moudle can be wired to the wemos d1 mini using the following diagram:
+1. The Arduino library installed in the previous step is located [here](https://github.com/LSatan/SmartRC-CC1101-Driver-Lib). If you are not using the Wemos D1 and instead using an Arduino or ESP8266 then you can follow the guide on their page on how to connect the CC1101 module
+2. The CC1101 module can be wired to the wemos d1 mini using the following diagram:
 <p align="center">
   <img width=50% src="https://user-images.githubusercontent.com/50533340/167989575-c3315ac0-7ed3-4d59-9d49-51c1b82eb3a3.png">
 </p>
