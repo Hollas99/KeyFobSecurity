@@ -12,6 +12,7 @@ A project on the security in rolling code remote keyless entry systems, primaril
       - [Installing Ubuntu and GNURadio](#installing-ubuntu-and-gnuradio)
       - [Installing Arduino IDE and programming the microcontroller](#installing-arduino-ide-and-programming-the-microcontroller)
       - [Wiring the microcontroller to the CC1101 Module](#wiring-the-microcontroller-to-the-cc1101-module)
+  * [Legal](#legal)
 
 
 
@@ -111,3 +112,5 @@ sudo apt install arduino
 <p align="center">
   <img width=50% src="https://user-images.githubusercontent.com/50533340/167989575-c3315ac0-7ed3-4d59-9d49-51c1b82eb3a3.png">
 </p>
+## Legal ##
+This project was completed for **educational purposes only** as part of a university project and should not be used on any vehicle or device you do not own. 
