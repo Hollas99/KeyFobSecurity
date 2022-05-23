@@ -84,7 +84,7 @@ source ~/prefix-3.10/setup_env.sh
 ```
 3. This may take quite a while, when finished you can then run the following to open GNURadio
 ```
-gnuradio-companion
+pybombs run gnuradio-companion
 ```
 4. The pybombs files can then be downloaded from this repository located in the pyBombs Folder
 5. Connect the SDR device (HackRF One) to the laptop
@@ -112,6 +112,17 @@ sudo apt install arduino
 <p align="center">
   <img width=50% src="https://user-images.githubusercontent.com/50533340/167989575-c3315ac0-7ed3-4d59-9d49-51c1b82eb3a3.png">
 </p>
+
+
+## Running the program ##
+Now everything should be set up, open up the GNU Radio project it should look like this:
+<p align="center">
+  <img width=50% src="https://user-images.githubusercontent.com/50533340/169909438-f12813af-b2c5-404d-b134-0e1b6ed3f8ff.png">
+</p>
+
+If the custom python blocks **'Manage the peaking signal'** and **'Record Signal when Peak detected'** are showing up empty or giving errors, ensure the downloaded **epy_block_0.py** and **epy_block_3.py** are located in the same folder as the main GNU Radio project file.
+Next, connect the signal jammer to a power source and place it next to the vehicle. You can confirm it's working by seeing if theres an open WiFi access point available named **ESPAP**.
+The next step is to run the program! Click the execute button a the top of the window, with the play symbol.
 
 ## Legal ##
 This project was completed for **educational purposes only** as part of a university project and should not be used on any vehicle or device you do not own. 
