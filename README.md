@@ -12,6 +12,7 @@ A project on the security in rolling code remote keyless entry systems, primaril
       - [Installing Ubuntu and GNURadio](#installing-ubuntu-and-gnuradio)
       - [Installing Arduino IDE and programming the microcontroller](#installing-arduino-ide-and-programming-the-microcontroller)
       - [Wiring the microcontroller to the CC1101 Module](#wiring-the-microcontroller-to-the-cc1101-module)
+  * [Running the program](#running-the-program)
   * [Legal](#legal)
 
 
