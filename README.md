@@ -123,6 +123,20 @@ Now everything should be set up, open up the GNU Radio project it should look li
 If the custom python blocks **'Manage the peaking signal'** and **'Record Signal when Peak detected'** are showing up empty or giving errors, ensure the downloaded **epy_block_0.py** and **epy_block_3.py** are located in the same folder as the main GNU Radio project file.
 Next, connect the signal jammer to a power source and place it next to the vehicle. You can confirm it's working by seeing if theres an open WiFi access point available named **ESPAP**.
 The next step is to run the program! Click the execute button a the top of the window, with the play symbol.
+You should be presented with this screen:
+<p align="center">
+  <img width=50% src=https://user-images.githubusercontent.com/50533340/169912909-22954250-0d9b-4f08-9acb-b9fd4ef2888f.png>
+</p>
+The three sliders will allow you to control the band pass filter, however, you also need to adjust the jamming frequency by editing the Arduino code.
+The bottom graph displays the filtered signal, the center graph displays the whole frequency band around the set frequency. 
+The top graph will signal when a key press is detected. If signals are being detected without pressing the key fob then the band pass filter needs to be adjusted.
+Once each signal has been captured, you can view in the console to check, then the first signal will need to be replayed.
+Open the replay_signal GNU Radio file and enable the signal 1 file source, and disable the signal 2 block.
+<p align="center">
+  <img width=50% src="https://user-images.githubusercontent.com/50533340/169913935-c6c3ade2-f81f-42f9-86f9-b9d3645467c0.png">
+</p>
+The signal 2 block can then be used at any point before the user unlocks their car again.
+
 
 ## Legal ##
 This project was completed for **educational purposes only** as part of a university project and should not be used on any vehicle or device you do not own. 
